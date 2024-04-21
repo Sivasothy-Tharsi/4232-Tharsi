@@ -8,12 +8,6 @@ pipeline {
     }
 
     stages {
-        stage('SCM Checkout') {
-            steps{
-            git 'https://github.com/Sivasothy-Tharsi/4232-Tharsi.git'
-            }
-        }
-
         stage('Build docker image') {
             steps {
                 sh 'docker build -t sivasothy/nodeapp:$BUILD_NUMBER .'
