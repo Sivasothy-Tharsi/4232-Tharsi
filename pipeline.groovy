@@ -23,6 +23,11 @@ pipeline {
                 sh 'docker push sivasothytharsi/nodeapp:$BUILD_NUMBER'
             }
         }
+         stage('Run container') {
+            steps {
+                sh 'docker run -d -p 3000:3000 sivasothytharsi/nodeapp:12'
+            }
+        }
 }
 post {
         always {
