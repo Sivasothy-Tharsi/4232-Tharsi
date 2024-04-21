@@ -3,6 +3,10 @@ pipeline {
     environment {
     DOCKERHUB_CREDENTIALS = credentials('sivasothy-dockerhub')
     }
+    tools {
+    git 'Git'
+    }
+
     stages {
         stage('SCM Checkout') {
             steps{
