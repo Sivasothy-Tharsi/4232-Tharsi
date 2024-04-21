@@ -25,7 +25,7 @@ pipeline {
         }
          stage('Run container') {
             steps {
-                sh 'docker run -d -p 3000:3000 sivasothytharsi/nodeapp:12'
+                sh 'docker run -d -p 3001:3000 sivasothytharsi/nodeapp:12'
             }
         }
 }
