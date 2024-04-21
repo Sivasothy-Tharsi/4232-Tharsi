@@ -1,9 +1,9 @@
 pipeline {
-    agent any 
+    agent any
     environment {
     DOCKERHUB_CREDENTIALS = credentials('sivasothy-dockerhub')
     }
-    stages { 
+    stages {
         stage('SCM Checkout') {
             steps{
             git 'https://github.com/Sivasothy-Tharsi/4232-Tharsi.git'
@@ -11,7 +11,7 @@ pipeline {
         }
 
         stage('Build docker image') {
-            steps {  
+            steps {
                 sh 'docker build -t valaxy/nodeapp:$BUILD_NUMBER .'
             }
         }
@@ -32,3 +32,4 @@ post {
         }
     }
 }
+
