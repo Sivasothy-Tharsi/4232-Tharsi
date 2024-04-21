@@ -7,6 +7,9 @@ WORKDIR /react-app
 # Copying package.json and package-lock.json
 COPY package*.json ./
 
+# Install npm latest version
+RUN npm install -g npm@latest
+
 # Installing dependencies
 RUN npm install
 
