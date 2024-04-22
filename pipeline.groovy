@@ -12,7 +12,7 @@ pipeline {
         stage('Fetch code') {
             steps {
                 script {
-                    git credentialsId: 'your-access-token-id', url: 'https://github.com/Sivasothy-Tharsi/4232-Tharsi.git'
+                    git credentialsId: 'sivasothy-github', url: 'https://github.com/Sivasothy-Tharsi/4232-Tharsi.git'
                 }
             }
         }
